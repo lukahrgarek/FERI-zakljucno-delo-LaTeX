@@ -1,0 +1,54 @@
+\documentclass{ZakljucnoDelo}
+
+\student{Ime in priimek študenta} %\student[ka]{Ime in priimek študentke}
+\IDstevilka{123456789}
+\vpisnaStevilka{E1061234}
+\naslovZakljucnegaDela{Naslov zaključnega dela}
+\naslovZakljucnegaDelaAng{Naslov zaključnega dela v angleškem jeziku}
+\univerza{Univerza v Mariboru}
+\fakulteta{Fakulteta za elektrotehniko, računalništvo in informatiko}
+\zakljucnoDelo{Zaključno delo}
+\kljucneBesede{beseda1, beseda2, beseda3}
+\keywords{word1, word2, word3}
+\UDK{xxxxxx}
+\datum{\today}
+\kraj{Maribor}
+\vrstaStudijskegaPrograma{vrsta študijskega programa}
+\imeStudijskegaPrograma{ime študijskega programa}
+\smer{naziv smeri}
+\mentor{naziv ter ime in priimek} %\mentor[(ica)]{naziv ter ime in priimek}
+\somentor{naziv ter ime in priimek} %\somentor[(ica)]{naziv ter ime in priimek}
+\lektor[(ica)]{ime in priimek, naziv}
+
+
+\povzetek{Pred vrstilcem UDK navedite 3 do 5 ključnih besed. Dolžina povzetka naj ne presega 100 besed. Ta stran mora biti v zaključnem delu seveda oštevilčena z ustrezno rimsko številko.}
+\abstract{Na tej strani naj bo čim vernejši prevod strani s slovenskim povzetkom v angleščino. Tudi ta stran mora biti v zaključnem delu oštevilčena z ustrezno rimsko številko.}
+
+\begin{document}
+    \frontmatter
+    \maketitle
+    \makepovzetek
+    \let\cleardoublepage\clearpage
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    
+    \mainmatter
+    \input{Poglavja/Uvod}
+    \input{Poglavja/Glavni_del}
+    \input{Poglavja/Primer_poglavja}
+    \input{Poglavja/Sklep}
+    
+    {
+        \backmatter
+        \bibliographystyle{plain}
+        %\nocite* %prikaži vso literaturo
+        \bibliography{Literatura}
+    }
+    \appendix
+    \input{Priloge/PrilogaA}
+    \input{Izjave/Izjava_o_avtorstvu}
+    \input{Izjave/Izjava_o_ustreznosti}
+    \input{Izjave/Izjava_o_objavi_osebnih_podatkov}
+    
+\end{document}
