@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e} % Avtor: Luka Hrgarek {luka.hrgarek@um.si}
-\ProvidesClass{ZakljucnoDelo}[2017/03/13] % it's not perfect but it's something
+\ProvidesClass{ZakljucnoDelo}[2017/03/13]
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 %Stran naj bo formata A4
