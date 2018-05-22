@@ -33,6 +33,9 @@
 \restylefloat{table}
 \usepackage{caption} 
 \captionsetup[table]{skip=0.5em}
+\usepackage{multicol}
+\usepackage[tableposition=bottom]{caption}
+\DeclareCaptionType{chart}[Graf][Kazalo grafov]
 
 %Robovi besedila naj bodo zgoraj in spodaj oddaljeni 30 mm od roba strani, na levi (notranji) strani 30 mm in na desni (zunanji) strani 25 mm od roba strani
 \usepackage{geometry}
@@ -46,6 +49,46 @@
  }
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\addto\captionsslovene{%
+  \renewcommand*{\lstlistlistingname}{Kazalo izsekov programske kode}%
+  \renewcommand*{\lstlistingname}{Izsek programske kode}%
+}
+
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\lstset{
+    backgroundcolor=\color{editorGray},
+    basicstyle={\small\ttfamily},   
+    frame=l,
+    % Line numbers
+    xleftmargin={0.75cm},
+    numbers=left,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    % Code design   
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{darkgray}\ttfamily,
+    ndkeywordstyle=\color{editorGreen}\bfseries,
+    stringstyle=\color{editorOcher},
+    % Code
+    %language=C++,
+    alsodigit={.:;},
+    tabsize=2,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true
+}
+
 \newcommand{\ifempty}[3]{%
   \ifthenelse{\isempty{#1}}{#2}{#3}%
 }

@@ -16,6 +16,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at pulvinar nis
 
 Quisque tristique urna in lorem laoreet at laoreet quam congue. Donec dolor turpis, blandit non imperdiet aliquet, blandit et felis. In lorem nisi, pretium sit amet vestibulum sed, tempus et sem. Proin non ante turpis. Nulla imperdiet fringilla convallis. Vivamus vel bibendum nisl \cite{zazula2004processing}. Pellentesque justo lectus, molestie vel luctus sed, lobortis in libero. Nulla facilisi. Aliquam erat volutpat. Suspendisse vitae nunc nunc. Sed aliquet est suscipit sapien rhoncus non adipiscing nibh consequat. Aliquam metus urna, faucibus eu vulputate non, luctus eu justo.
 
+\begin{lstlisting}[language=C++, caption={Primer programske kode}]
+#include <iostream>
+int main()
+{
+    // print hello to the console
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+\end{lstlisting}
+
 \subsection{Pododdelek}
 
 Donec urna leo, vulputate vitae porta eu, vehicula blandit libero. Phasellus eget massa et leo condimentum mollis. Nullam molestie, justo at pellentesque vulputate, sapien velit ornare diam, nec gravida lacus augue non diam. Integer mattis lacus id libero ultrices sit amet mollis neque molestie. Integer ut leo eget mi volutpat congue \cite{druzovec2010information}. Vivamus sodales, turpis id venenatis placerat, tellus purus adipiscing magna, eu aliquam nibh dolor id nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed cursus convallis quam nec vehicula. Sed vulputate neque eget odio fringilla ac sodales urna feugiat.
@@ -29,3 +39,49 @@ Phasellus nisi quam, volutpat non ullamcorper eget, congue fringilla leo. Cras e
     -\frac{1}{4}\left(e^{-4t_1}+e^{4t_1-8}\right)
   \right)\,dt_1
 \end{equation}
+
+
+\begin{chart}[htb]
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[
+		xlabel=$x$,
+		ylabel={$f(x) = x^2 - x +4$}
+	]
+	% use TeX as calculator:
+	\addplot {x^2 - x +4};
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+ \caption{Primer 1}
+    \label{fig:graf_1}
+\end{chart}
+
+\begin{chart}[htb]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ylabel={\#participants},
+    symbolic x coords={tool8,tool9,tool10},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    ]
+\addplot coordinates {(tool8,7) (tool9,9) (tool10,4)};
+\addplot coordinates {(tool8,4) (tool9,4) (tool10,4)};
+\addplot coordinates {(tool8,1) (tool9,1) (tool10,1)};
+\legend{used,understood,not understood}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ \caption{Primer 2}
+    \label{fig:graf_2}
+\end{chart}
+
+
+%Več primerov:
+%http://pgfplots.sourceforge.net/gallery.html
