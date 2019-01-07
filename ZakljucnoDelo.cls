@@ -134,6 +134,9 @@
 \def\UDK#1{\def\@UDK{#1}}
 \newcommand{\pUDK}{\@UDK}
 
+\def\UDC#1{\def\@UDC{#1}}
+\newcommand{\pUDC}{\@UDC}
+
 \def\povzetek#1{\def\@povzetek{#1}}
 \newcommand{\pPovzetek}{\@povzetek}
 
@@ -292,7 +295,7 @@
     \bigskip
     \noindent\textbf{Key words:} \pKeywords \par
     \bigskip
-    \noindent\textbf{UDK:} \pUDK \par
+    \noindent\textbf{UDC:} \pUDC \par
     \vspace{4em}
     \noindent\textbf{Abstract}\par
     \bigskip
